@@ -1206,10 +1206,10 @@
     "@hickory/root" "^2.0.0"
     "@types/react" "^16.7.18"
 
-"@curi/router@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@curi/router/-/router-2.0.0.tgz#c6f73c176035a7c0d81df8345cc2d92a89307b44"
-  integrity sha512-A6cYSiwHIHVH0P7cMv+5ANETIKDNDjorc1OxQMI/o0PYwtUJnBm07cs7qZgWkuhyh7d7xrZNnZvQVyqrMHEO0w==
+"@curi/router@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@curi/router/-/router-2.0.1.tgz#348ed3067ab3e230e506c3818b73662e621685fc"
+  integrity sha512-cz2j8kaCs/iPgyf8CyizH1EVjAyRfqYZmzjQh+CJh5Ba5hNVGGmhfdriNIqb8f1n65LPyvfRLjobkb5PY0oxJQ==
   dependencies:
     "@curi/interactions" "^2.0.0"
     "@curi/types" "^2.0.0"
