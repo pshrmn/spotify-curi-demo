@@ -1,0 +1,25 @@
+.Search {
+  height: 100%;
+  background: var(--nearly-black-gradient);
+  color: #fff;
+}
+
+.SearchBox {
+  background: #282828;
+  padding: 16px;
+}
+
+.SearchBox input {
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -.005em;
+  color: #fff;
+  text-transform: none;
+  caret-color: #1db954;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+}

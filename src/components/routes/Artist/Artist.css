@@ -1,0 +1,16 @@
+.Artist {
+  padding-top: 28px;
+  color: #fff;
+}
+
+.bg.artist {
+  background: var(--orange-gradient);
+}
+
+.Artist .about {
+  text-align: center;
+}
+
+.Artist h1 {
+  font-size: 72px;
+}

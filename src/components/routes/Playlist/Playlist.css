@@ -1,0 +1,20 @@
+.Playlist {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-top: 28px;
+  color: #fff;
+}
+
+.bg.playlist {
+  background: var(--green-gradient);
+}
+
+.Playlist .about {
+  font-size: 16px;
+  width: 300px;
+  padding: 0 8px;
+}
+
+.Playlist .about h1 {
+  text-align: center;
+}

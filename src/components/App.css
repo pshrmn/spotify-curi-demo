@@ -1,0 +1,55 @@
+.App {
+  display: flex;
+  flex-flow: column nowrap;
+  overflow:hidden;
+}
+
+main {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.content {
+  flex: 2;
+}
+
+:root {
+  --red-gradient: linear-gradient(to right bottom, #d32f2f, rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+  --pink-gradient: linear-gradient(to right bottom, #e91e63, rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+  --orange-gradient: linear-gradient(to right bottom, #ff8f00, rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+  --bright-orange-gradient: linear-gradient(to right bottom, #e65100, rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+  --green-gradient: linear-gradient(to right bottom, #1b5e20, rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+  --bright-blue-gradient: linear-gradient(to right bottom, #03a9f4, rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+  --nearly-black-gradient: linear-gradient(to right bottom, #121212, rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+  --purple-gradient: linear-gradient(to right bottom, #4527a0, rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+}
+
+/* reset */
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contentSpacing {
+  padding: 0 32px;
+  margin: 0 auto;
+  max-width: 1480px;
+}

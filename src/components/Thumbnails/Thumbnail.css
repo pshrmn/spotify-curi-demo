@@ -1,0 +1,13 @@
+.Thumbnail {
+  width: 200px;
+  padding: 0 8px 2.5em;
+}
+
+.Thumbnail a {
+  color: #fff;
+  font-size: 14px;
+}
+
+.Thumbnail p {
+  text-align: center;
+}

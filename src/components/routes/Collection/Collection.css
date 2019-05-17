@@ -1,0 +1,25 @@
+.Collection {
+  height: 100%;
+  color: #fff;
+}
+
+.Collection.playlists {
+  background: var(--orange-gradient);
+}
+
+.Collection.tracks {
+  background: var(--bright-orange-gradient);
+}
+
+.Collection.albums {
+  background: var(--green-gradient);
+}
+
+.Collection.artists {
+  background: var(--purple-gradient);
+}
+
+.Collection h2 {
+  font-size: 36px;
+  color: #fff;
+}

@@ -1,0 +1,65 @@
+const firstNames = [
+  "Emma",
+  "Olivia",
+  "Ava",
+  "Isabella",
+  "Sophia",
+  "Charlotte",
+  "Mia",
+  "Amelia",
+  "Harper",
+  "Evelyn",
+  "Abigail",
+  "Emily",
+  "Elizabeth",
+  "Mila",
+  "Ella",
+  "Liam",
+  "Noah",
+  "William",
+  "James",
+  "Oliver",
+  "Benjamin",
+  "Elijah",
+  "Lucas",
+  "Mason",
+  "Logan",
+  "Alexander",
+  "Ethan",
+  "Jacob",
+  "Michael",
+  "Daniel"
+];
+const lastNames = [
+  "Smith",
+  "Johnson",
+  "Williams",
+  "Jones",
+  "Brown",
+  "Davis",
+  "Miller",
+  "Wilson",
+  "Moore",
+  "Taylor",
+  "Anderson",
+  "Thomas",
+  "Jackson",
+  "White",
+  "Harris",
+  "Martin",
+  "Thompson",
+  "Garcia",
+  "Martinez",
+  "Robinson",
+  "Clark",
+  "Rodriguez",
+  "Lewis",
+  "Lee",
+  "Walker"
+];
+
+export default function artistName() {
+  const first = firstNames[Math.floor(Math.random() * firstNames.length)];
+  const last = lastNames[Math.floor(Math.random() * lastNames.length)];
+  return `${first} ${last}`;
+}

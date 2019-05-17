@@ -1,0 +1,45 @@
+.NavBar {
+  width: 230px;
+  height: calc(100vh - 100px);
+  background: #0e0b06;
+  padding-top: 24px;
+}
+
+.NavBar a {
+  color: #b3b3b3;
+}
+
+.NavBar-header {
+  padding: 0 0 18px 24px;
+  font-size: 36px;
+}
+
+.NavBar-header a {
+  color: #fff;
+}
+
+.NavBar-list a {
+  display: flex;
+  height: 40px;
+  padding: 0 24px;
+  position: relative;
+  align-items: center;
+  opacity: 0.6;
+  transition: opacity .2s linear;
+}
+
+.NavBar-list a.active, .NavBar-list a:hover {
+  opacity: 1;
+}
+
+
+.NavBar-list a.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 0;
+  width: 4px;
+  background-color: #1ed760;
+}

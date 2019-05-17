@@ -1,0 +1,27 @@
+.SongList {
+  flex: 2;
+  font-size: 14px;
+  padding: 0 8px;
+}
+
+.SongList .song {
+  height: 4.56em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.SongList .song a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity .2s linear;
+}
+
+.SongList .song a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.SongList .separator {
+  padding: 0 8px;
+}

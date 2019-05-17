@@ -1,0 +1,20 @@
+.bg.featured {
+  background: var(--pink-gradient);
+}
+
+.bg.charts {
+  background: var(--red-gradient);
+}
+
+.bg.genres {
+  background: var(--green-gradient);
+}
+
+.bg.newreleases {
+  background: var(--bright-blue-gradient);
+}
+
+.bg.discover {
+  background: var(--purple-gradient);
+}
+

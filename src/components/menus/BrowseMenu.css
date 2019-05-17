@@ -1,0 +1,37 @@
+.BrowseMenu {
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.BrowseMenu ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.BrowseMenu a {
+  color: #fff;
+  margin: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  position: relative;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity .2s linear;
+}
+
+.BrowseMenu a.active, .BrowseMenu a:hover {
+  opacity: 1;
+}
+
+.BrowseMenu a.active:before {
+  content: "";
+  height: 2px;
+  background-color: #1db954;
+  width: 30px;
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: 0;
+  margin-left: -15px;
+}
