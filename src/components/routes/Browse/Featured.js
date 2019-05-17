@@ -3,11 +3,9 @@ import React from "react";
 import Wrapper from "./Wrapper";
 import Thumbnail from "../../Thumbnails/Thumbnail";
 import ThumbnailList from "../../Thumbnails/ThumbnailList";
-import api from "../../../api/session";
 
-export default function Featured() {
-  const forYou = api.categorizedPlaylist("for you");
-  const recent = api.categorizedPlaylist("recent");
+export default function Featured({ response }) {
+  const { forYou, recent } = response.data;
   return (
     <Wrapper type="featured">
       <h2>Made for you</h2>

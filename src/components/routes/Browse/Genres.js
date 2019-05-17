@@ -3,10 +3,9 @@ import React from "react";
 import Wrapper from "./Wrapper";
 import Thumbnail from "../../Thumbnails/Thumbnail";
 import ThumbnailList from "../../Thumbnails/ThumbnailList";
-import api from "../../../api/session";
 
-export default function Genres() {
-  const genres = api.categorizedPlaylist("genres");
+export default function Genres({ response }) {
+  const { genres } = response.data;
 
   return (
     <Wrapper type="genres">

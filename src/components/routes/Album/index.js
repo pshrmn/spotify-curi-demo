@@ -4,14 +4,12 @@ import { Link } from "@curi/react-dom";
 import Content from "../../Content";
 import SongList from "../../SongList";
 import Box from "../../Thumbnails/Box";
-import api from "../../../api/session";
 
 import "./Album.css";
 
 function Album({ response }) {
-  const { id } = response.params;
-  const data = api.album(id);
-  if (!data) {
+  const { album } = response.data;
+  if (!album) {
     return (
       <Content type="album">
         <div className="Album">
@@ -26,14 +24,14 @@ function Album({ response }) {
       <div className="Album">
         <div className="about">
           <Box />
-          <h1>{data.title}</h1>
+          <h1>{album.title}</h1>
           <p>
-            <Link name="Artist" params={{ id: data.artist.id }}>
-              {data.artist.name}
+            <Link name="Artist" params={{ id: album.artist.id }}>
+              {album.artist.name}
             </Link>
           </p>
         </div>
-        <SongList songs={data.songs} byline={false} />
+        <SongList songs={album.songs} byline={false} />
       </div>
     </Content>
   );

@@ -3,14 +3,12 @@ import React from "react";
 import Content from "../../Content";
 import ThumbnailList from "../../Thumbnails/ThumbnailList";
 import Thumbnail from "../../Thumbnails/Thumbnail";
-import api from "../../../api/session";
 
 import "./Artist.css";
 
 function Artist({ response }) {
-  const { id } = response.params;
-  const data = api.artist(id);
-  if (!data) {
+  const { artist } = response.data;
+  if (!artist) {
     return (
       <Content type="artist">
         <div className="Artist">
@@ -24,12 +22,12 @@ function Artist({ response }) {
     <Content type="artist">
       <div className="Artist">
         <div className="about">
-          <h1>{data.name}</h1>
+          <h1>{artist.name}</h1>
         </div>
         <div>
           <h2>Albums</h2>
           <ThumbnailList>
-            {data.albums.map(album => (
+            {artist.albums.map(album => (
               <Thumbnail
                 key={album.id}
                 name="Album"

@@ -2,10 +2,9 @@ import React from "react";
 
 import Wrapper from "./Wrapper";
 import SongList from "../../SongList";
-import api from "../../../api/session";
 
-export default function Tracks() {
-  const songs = api.user.songs;
+export default function Tracks({ response }) {
+  const { songs } = response.data;
   return (
     <Wrapper type="tracks">
       <h2>Tracks</h2>

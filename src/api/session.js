@@ -69,21 +69,23 @@ const user = {
 };
 
 export default {
-  categorizedPlaylist(id) {
-    return categories[id];
+  category(id) {
+    return Promise.resolve(categories[id]);
   },
   playlist(id) {
-    return playlists.find(p => p.id === id);
+    return Promise.resolve(playlists.find(p => p.id === id));
   },
   artist(id) {
-    return artists.find(a => a.id === id);
+    return Promise.resolve(artists.find(a => a.id === id));
   },
   album(id) {
-    return albums.find(a => a.id === id);
+    return Promise.resolve(albums.find(a => a.id === id));
   },
   newAlbums(count) {
-    return random(count, albums.length, new Set())
-      .map(index => albums[index]);
+    return Promise.resolve(
+      random(count, albums.length, new Set())
+        .map(index => albums[index])
+    );
   },
   user
 };

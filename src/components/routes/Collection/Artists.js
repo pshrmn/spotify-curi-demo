@@ -3,11 +3,9 @@ import React from "react";
 import Wrapper from "./Wrapper";
 import Thumbnail from "../../Thumbnails/Thumbnail";
 import ThumbnailList from "../../Thumbnails/ThumbnailList";
-import api from "../../../api/session";
 
-export default function Artists() {
-  const artists = api.user.artists;
-
+export default function Artists({ response }) {
+  const { artists } = response.data;
   return (
     <Wrapper type="artists">
       <h2>Artists</h2>

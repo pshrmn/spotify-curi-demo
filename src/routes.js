@@ -17,6 +17,7 @@ import Album from "./components/routes/Album";
 import Search from "./components/routes/Search";
 import NotFound from "./components/routes/NotFound";
 
+import api from "./api/session";
 
 export default prepareRoutes([
   {
@@ -44,9 +45,20 @@ export default prepareRoutes([
       {
         name: "Browse Featured",
         path: "featured",
-        respond() {
+        resolve() {
+          return Promise.all([
+            api.category("for you"),
+            api.category("recent")
+          ]);
+        },
+        respond({ resolved }) {
+          const [forYou, recent] = resolved;
           return {
             body: BrowseFeatured,
+            data: {
+              forYou,
+              recent
+            },
             meta: {
               title: "Featured Playlists"
             }
@@ -56,9 +68,15 @@ export default prepareRoutes([
       {
         name: "Browse Charts",
         path: "charts",
-        respond() {
+        resolve() {
+          return api.category("featured charts");
+        },
+        respond({ resolved }) {
           return {
             body: BrowseCharts,
+            data: {
+              featuredCharts: resolved
+            },
             meta: {
               title: "Chart Topping Playlists"
             }
@@ -68,9 +86,15 @@ export default prepareRoutes([
       {
         name: "Browse Genres",
         path: "genres",
-        respond() {
+        resolve() {
+          return api.category("genres");
+        },
+        respond({ resolved }) {
           return {
             body: BrowseGenres,
+            data: {
+              genres: resolved
+            },
             meta: {
               title: "Genre Playlists"
             }
@@ -80,9 +104,15 @@ export default prepareRoutes([
       {
         name: "Browse New Releases",
         path: "newreleases",
-        respond() {
+        resolve() {
+          return api.newAlbums(15);
+        },
+        respond({ resolved }) {
           return {
             body: BrowseNewReleases,
+            data: {
+              albums: resolved
+            },
             meta: {
               title: "New Releases"
             }
@@ -92,9 +122,15 @@ export default prepareRoutes([
       {
         name: "Browse Discover",
         path: "discover",
-        respond() {
+        resolve() {
+          return api.category("discover");
+        },
+        respond({ resolved }) {
           return {
             body: BrowseDiscover,
+            data: {
+              discover: resolved
+            },
             meta: {
               title: "Discover New Music"
             }
@@ -128,9 +164,15 @@ export default prepareRoutes([
       {
         name: "Playlists Collection",
         path: "playlists",
-        respond() {
+        resolve() {
+          return Promise.resolve(api.user.playlists);
+        },
+        respond({ resolved }) {
           return {
             body: CollectionPlaylists,
+            data: {
+              playlists: resolved
+            },
             meta: {
               title: "Your Playlists"
             }
@@ -140,9 +182,15 @@ export default prepareRoutes([
       {
         name: "Tracks Collection",
         path: "tracks",
-        respond() {
+        resolve() {
+          return Promise.resolve(api.user.songs);
+        },
+        respond({ resolved }) {
           return {
             body: CollectionTracks,
+            data: {
+              songs: resolved
+            },
             meta: {
               title: "Your Favorite Songs"
             }
@@ -152,9 +200,15 @@ export default prepareRoutes([
       {
         name: "Albums Collection",
         path: "albums",
-        respond() {
+        resolve() {
+          return Promise.resolve(api.user.albums);
+        },
+        respond({ resolved }) {
           return {
             body: CollectionAlbums,
+            data: {
+              albums: resolved
+            },
             meta: {
               title: "Your Favorite Albums"
             }
@@ -164,9 +218,15 @@ export default prepareRoutes([
       {
         name: "Artists Collection",
         path: "artists",
-        respond() {
+        resolve() {
+          return Promise.resolve(api.user.artists);
+        },
+        respond({ resolved }) {
           return {
             body: CollectionArtists,
+            data: {
+              artists: resolved
+            },
             meta: {
               title: "Your Favorite Artists"
             }
@@ -190,9 +250,15 @@ export default prepareRoutes([
   {
     name: "Playlist",
     path: "playlist/:id",
-    respond() {
+    resolve({ params }) {
+      return api.playlist(params.id);
+    },
+    respond({ resolved }) {
       return {
         body: Playlist,
+        data: {
+          playlist: resolved
+        },
         meta: {
           title: "Playlist"
         }
@@ -202,9 +268,15 @@ export default prepareRoutes([
   {
     name: "Artist",
     path: "artist/:id",
-    respond() {
+    resolve({ params }) {
+      return api.artist(params.id);
+    },
+    respond({ resolved }) {
       return {
         body: Artist,
+        data: {
+          artist: resolved
+        },
         meta: {
           title: "Artist"
         }
@@ -214,9 +286,15 @@ export default prepareRoutes([
   {
     name: "Album",
     path: "album/:id",
-    respond() {
+    resolve({ params }) {
+      return api.album(params.id);
+    },
+    respond({ resolved }) {
       return {
         body: Album,
+        data: {
+          album: resolved
+        },
         meta: {
           title: "Album"
         }

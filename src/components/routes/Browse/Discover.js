@@ -3,10 +3,9 @@ import React from "react";
 import Wrapper from "./Wrapper";
 import Thumbnail from "../../Thumbnails/Thumbnail";
 import ThumbnailList from "../../Thumbnails/ThumbnailList";
-import api from "../../../api/session";
 
-export default function Discover() {
-  const discover = api.categorizedPlaylist("discover");
+export default function Discover({ response }) {
+  const { discover } = response.data;
 
   return (
     <Wrapper type="discover">

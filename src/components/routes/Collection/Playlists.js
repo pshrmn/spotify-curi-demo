@@ -3,10 +3,9 @@ import React from "react";
 import Wrapper from "./Wrapper";
 import Thumbnail from "../../Thumbnails/Thumbnail";
 import ThumbnailList from "../../Thumbnails/ThumbnailList";
-import api from "../../../api/session";
 
-export default function Playlists() {
-  const playlists = api.user.playlists;
+export default function Playlists({ response }) {
+  const { playlists } = response.data;
 
   return (
     <Wrapper type="playlists">

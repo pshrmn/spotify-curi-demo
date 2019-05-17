@@ -3,14 +3,12 @@ import React from "react";
 import Content from "../../Content";
 import SongList from "../../SongList";
 import Box from "../../Thumbnails/Box";
-import api from "../../../api/session";
 
 import "./Playlist.css";
 
 function Playlist({ response }) {
-  const { id } = response.params;
-  const data = api.playlist(id);
-  if (!data) {
+  const { playlist } = response.data;
+  if (!playlist) {
     return (
       <Content type="playlist">
         <div className="Playlist">
@@ -24,9 +22,9 @@ function Playlist({ response }) {
       <div className="Playlist">
         <div className="about">
           <Box />
-          <h1>{data.title}</h1>
+          <h1>{playlist.title}</h1>
         </div>
-        <SongList songs={data.songs} />
+        <SongList songs={playlist.songs} />
       </div>
     </Content>
   );
