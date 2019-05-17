@@ -1,5 +1,6 @@
 import React from "react";
 
+import Wrapper from "./Wrapper";
 import Thumbnail from "../../Thumbnails/Thumbnail";
 import ThumbnailList from "../../Thumbnails/ThumbnailList";
 import api from "../../../api/session";
@@ -7,7 +8,7 @@ import api from "../../../api/session";
 export default function NewReleases() {
   const albums = api.newAlbums(15);
   return (
-    <div>
+    <Wrapper type="newreleases">
       <h2>New albums & singles</h2>
       <ThumbnailList>
          {albums.map(album => (
@@ -19,6 +20,6 @@ export default function NewReleases() {
           />
         ))}
       </ThumbnailList>
-    </div>
+    </Wrapper>
   );
 }

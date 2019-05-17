@@ -9,27 +9,27 @@ function BrowseMenu() {
     <nav className="BrowseMenu">
       <ul>
         <li>
-          <ActiveLink name="Browse" params={{ type: "featured"}}>
+          <ActiveLink name="Browse Featured">
             Featured
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink name="Browse" params={{ type: "charts"}}>
+          <ActiveLink name="Browse Charts">
             Charts
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink name="Browse" params={{ type: "genres"}}>
+          <ActiveLink name="Browse Genres">
             Genres & Moods
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink name="Browse" params={{ type: "newreleases"}}>
+          <ActiveLink name="Browse New Releases">
             New Releases
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink name="Browse" params={{ type: "discover"}}>
+          <ActiveLink name="Browse Discover">
             Discover
           </ActiveLink>
         </li>

@@ -1,5 +1,6 @@
 import React from "react";
 
+import Wrapper from "./Wrapper";
 import Thumbnail from "../../Thumbnails/Thumbnail";
 import ThumbnailList from "../../Thumbnails/ThumbnailList";
 import api from "../../../api/session";
@@ -8,7 +9,7 @@ export default function Artists() {
   const artists = api.user.artists;
 
   return (
-    <div>
+    <Wrapper type="artists">
       <h2>Artists</h2>
 
       <ThumbnailList>
@@ -21,6 +22,6 @@ export default function Artists() {
           />
         ))}
       </ThumbnailList>
-    </div>
+    </Wrapper>
   );
 }

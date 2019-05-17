@@ -1,5 +1,6 @@
 import React from "react";
 
+import Wrapper from "./Wrapper";
 import Thumbnail from "../../Thumbnails/Thumbnail";
 import ThumbnailList from "../../Thumbnails/ThumbnailList";
 import api from "../../../api/session";
@@ -8,7 +9,7 @@ export default function Featured() {
   const forYou = api.categorizedPlaylist("for you");
   const recent = api.categorizedPlaylist("recent");
   return (
-    <div>
+    <Wrapper type="featured">
       <h2>Made for you</h2>
       <ThumbnailList>
          {forYou.map(list => (
@@ -31,6 +32,6 @@ export default function Featured() {
           />
         ))}
       </ThumbnailList>
-    </div>
+    </Wrapper>
   );
 }

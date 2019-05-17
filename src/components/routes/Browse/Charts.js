@@ -1,5 +1,6 @@
 import React from "react";
 
+import Wrapper from "./Wrapper";
 import Thumbnail from "../../Thumbnails/Thumbnail";
 import ThumbnailList from "../../Thumbnails/ThumbnailList";
 import api from "../../../api/session";
@@ -8,7 +9,7 @@ export default function Charts() {
   const featuredCharts = api.categorizedPlaylist("featured charts");
 
   return (
-    <div>
+    <Wrapper type="featured">
       <h2>Featured Charts</h2>
       <ThumbnailList>
          {featuredCharts.map(list => (
@@ -20,6 +21,6 @@ export default function Charts() {
           />
         ))}
       </ThumbnailList>
-    </div>
+    </Wrapper>
   );
 }

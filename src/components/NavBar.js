@@ -15,7 +15,7 @@ function NavBar() {
     <div className="NavBar">
       <nav>
         <div className="NavBar-header">
-          <Link name="Browse" params={{ type: "featured" }}>
+          <Link name="Browse Featured">
             Three Bars
           </Link>
         </div>

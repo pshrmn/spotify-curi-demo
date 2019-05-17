@@ -9,22 +9,22 @@ function CollectionMenu() {
     <nav className="CollectionMenu">
       <ul>
         <li>
-          <ActiveLink name="Collection" params={{ type: "playlists"}}>
+          <ActiveLink name="Playlists Collection">
             Playlists
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink name="Collection" params={{ type: "tracks"}}>
+          <ActiveLink name="Tracks Collection">
             Favorite Songs
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink name="Collection" params={{ type: "albums"}}>
+          <ActiveLink name="Albums Collection">
             Albums
           </ActiveLink>
         </li>
         <li>
-          <ActiveLink name="Collection" params={{ type: "artists"}}>
+          <ActiveLink name="Artists Collection">
             Artists
           </ActiveLink>
         </li>
