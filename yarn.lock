@@ -1179,6 +1179,11 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-9.0.1.tgz#c27b391d8457d1e893f1eddeaf5e5412d12ffbb5"
   integrity sha512-6It2EVfGskxZCQhuykrfnALg7oVeiI6KclWSmGDqB0AiInVrTGB9Jp9i4/Ad21u9Jde/voVQz6eFX/eSg/UsPA==
 
+"@curi/helpers@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@curi/helpers/-/helpers-2.0.0.tgz#06894deb216dab728b92e20378003f8ab4feab64"
+  integrity sha512-+7Rgmamv1xkUvIdcSG3ORA81FDoyyM/oVT8j2JlXhxkuGJjH+oceZv2HyZiZVbK5RiCh8YwsC+oFqju0faExDA==
+
 "@curi/interactions@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@curi/interactions/-/interactions-2.0.0.tgz#db45cbb58a68eaff48c928ac1739a78369ecaf56"

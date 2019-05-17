@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@curi/helpers": "^2.0.0",
     "@curi/interactions": "^2.0.0",
     "@curi/react-dom": "^2.0.0",
     "@curi/router": "^2.0.1",
