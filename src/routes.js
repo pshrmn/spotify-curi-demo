@@ -46,7 +46,10 @@ export default prepareRoutes([
         path: "featured",
         respond() {
           return {
-            body: BrowseFeatured
+            body: BrowseFeatured,
+            meta: {
+              title: "Featured Playlists"
+            }
           }
         }
       },
@@ -55,7 +58,10 @@ export default prepareRoutes([
         path: "charts",
         respond() {
           return {
-            body: BrowseCharts
+            body: BrowseCharts,
+            meta: {
+              title: "Chart Topping Playlists"
+            }
           }
         }
       },
@@ -64,7 +70,10 @@ export default prepareRoutes([
         path: "genres",
         respond() {
           return {
-            body: BrowseGenres
+            body: BrowseGenres,
+            meta: {
+              title: "Genre Playlists"
+            }
           }
         }
       },
@@ -73,7 +82,10 @@ export default prepareRoutes([
         path: "newreleases",
         respond() {
           return {
-            body: BrowseNewReleases
+            body: BrowseNewReleases,
+            meta: {
+              title: "New Releases"
+            }
           }
         }
       },
@@ -82,7 +94,10 @@ export default prepareRoutes([
         path: "discover",
         respond() {
           return {
-            body: BrowseDiscover
+            body: BrowseDiscover,
+            meta: {
+              title: "Discover New Music"
+            }
           }
         }
       },
@@ -115,7 +130,10 @@ export default prepareRoutes([
         path: "playlists",
         respond() {
           return {
-            body: CollectionPlaylists
+            body: CollectionPlaylists,
+            meta: {
+              title: "Your Playlists"
+            }
           };
         }
       },
@@ -124,7 +142,10 @@ export default prepareRoutes([
         path: "tracks",
         respond() {
           return {
-            body: CollectionTracks
+            body: CollectionTracks,
+            meta: {
+              title: "Your Favorite Songs"
+            }
           };
         }
       },
@@ -133,7 +154,10 @@ export default prepareRoutes([
         path: "albums",
         respond() {
           return {
-            body: CollectionAlbums
+            body: CollectionAlbums,
+            meta: {
+              title: "Your Favorite Albums"
+            }
           };
         }
       },
@@ -142,7 +166,10 @@ export default prepareRoutes([
         path: "artists",
         respond() {
           return {
-            body: CollectionArtists
+            body: CollectionArtists,
+            meta: {
+              title: "Your Favorite Artists"
+            }
           };
         }
       },
@@ -165,7 +192,10 @@ export default prepareRoutes([
     path: "playlist/:id",
     respond() {
       return {
-        body: Playlist
+        body: Playlist,
+        meta: {
+          title: "Playlist"
+        }
       };
     }
   },
@@ -174,7 +204,10 @@ export default prepareRoutes([
     path: "artist/:id",
     respond() {
       return {
-        body: Artist
+        body: Artist,
+        meta: {
+          title: "Artist"
+        }
       };
     }
   },
@@ -183,7 +216,10 @@ export default prepareRoutes([
     path: "album/:id",
     respond() {
       return {
-        body: Album
+        body: Album,
+        meta: {
+          title: "Album"
+        }
       };
     }
   },
@@ -192,7 +228,10 @@ export default prepareRoutes([
     path: "search",
     respond() {
       return {
-        body: Search
+        body: Search,
+        meta: {
+          title: "Search"
+        }
       };
     }
   },
@@ -201,7 +240,10 @@ export default prepareRoutes([
     path: "(.*)",
     respond() {
       return {
-        body: NotFound
+        body: NotFound,
+        meta: {
+          title: "Unknown Location"
+        }
       };
     }
   }

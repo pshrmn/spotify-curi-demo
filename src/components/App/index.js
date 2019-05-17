@@ -2,8 +2,8 @@ import React from 'react';
 import { useResponse } from '@curi/react-dom';
 
 import './App.css';
-import NavBar from './NavBar';
-import NowPlaying from './NowPlaying';
+import NavBar from '../NavBar';
+import NowPlaying from '../NowPlaying';
 
 function App() {
   const { response } = useResponse();

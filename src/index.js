@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createRouter } from '@curi/router';
+import { createRouter, announce } from '@curi/router';
 import { browser } from '@hickory/browser';
 import { createRouterComponent } from '@curi/react-dom';
 
@@ -11,7 +11,14 @@ import * as serviceWorker from './serviceWorker';
 
 import "./api/session";
 
-const router = createRouter(browser, routes);
+const router = createRouter(browser, routes, {
+  invisibleRedirects: true,
+  sideEffects: [
+    announce(({ response }) => {
+      return `Navigated to ${response.meta.title}`;
+    })
+  ]
+});
 const Router = createRouterComponent(router);
 
 ReactDOM.render((
